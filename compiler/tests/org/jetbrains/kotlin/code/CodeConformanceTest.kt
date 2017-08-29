@@ -36,6 +36,7 @@ class CodeConformanceTest : TestCase() {
                 "libraries/kotlin.test/js/it/node_modules",
                 "libraries/stdlib/js/node_modules",
                 "libraries/reflect/build",
+                "libraries/reflect/api/src/java9/java/kotlin/reflect/jvm/internal/impl",
                 "libraries/tools/binary-compatibility-validator/src/main/kotlin/org.jetbrains.kotlin.tools",
                 "dependencies",
                 "js/js.translator/qunit/qunit.js",
