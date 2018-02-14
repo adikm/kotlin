@@ -16,7 +16,7 @@ dependencies {
     compileOnly(project(":kotlin-reflect-api"))
 
     testCompileOnly(project(":compiler:cli-common"))
-    testCompile(projectTests(":compiler:tests-common"))
+    testCompile(project(":compiler:tests-common"))
     testCompile(commonDep("junit:junit"))
     testCompile(protobufFull())
     testCompile(projectDist(":kotlin-stdlib"))

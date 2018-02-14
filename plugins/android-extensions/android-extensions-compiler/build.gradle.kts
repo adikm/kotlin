@@ -23,7 +23,7 @@ dependencies {
     testCompile(project(":compiler:cli"))
     testCompile(project(":compiler:tests-common"))
     testCompile(project(":kotlin-android-extensions-runtime"))
-    testCompile(projectTests(":compiler:tests-common"))
+    testCompile(project(":compiler:tests-common"))
     testCompile(projectDist(":kotlin-test:kotlin-test-jvm"))
     testCompile(commonDep("junit:junit"))
 

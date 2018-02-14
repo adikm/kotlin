@@ -20,7 +20,7 @@ dependencies {
     compileOnly(intellijDep()) { includeJars("asm-all") }
 
     testCompile(project(":compiler:tests-common"))
-    testCompile(projectTests(":compiler:tests-common"))
+    testCompile(project(":compiler:tests-common"))
     testCompile(commonDep("junit:junit"))
     testCompile(project(":kotlin-annotation-processing-runtime"))
 }

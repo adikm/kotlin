@@ -24,13 +24,15 @@ dependencies {
 }
 
 sourceSets {
-    "main" { projectDefault() }
+    "main" { }
     "test" { projectDefault() }
 }
 
 projectTest {
     workingDir = rootDir
 }
+
+testsJar {}
 
 val generateTests by generator("org.jetbrains.kotlin.generators.tests.GenerateTestsKt")
 

@@ -5,7 +5,7 @@ apply { plugin("jps-compatible") }
 dependencies {
     compile(project(":compiler:frontend"))
     compile(project(":compiler:frontend.script"))
-    compile(projectTests(":compiler:tests-common"))
+    compile(project(":compiler:tests-common"))
     compile(project(":idea"))
     compile(project(":idea:idea-jvm"))
     compile(project(":idea:idea-core"))

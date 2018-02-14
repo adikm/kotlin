@@ -1,41 +1,40 @@
 
 apply { plugin("kotlin") }
+apply { plugin("jps-compatible") }
 
 dependencies {
-    testCompile(project(":core:descriptors"))
-    testCompile(project(":core:descriptors.jvm"))
-    testCompile(project(":core:deserialization"))
-    testCompile(project(":compiler:util"))
-    testCompile(project(":compiler:backend"))
-    testCompile(project(":compiler:ir.ir2cfg"))
-    testCompile(project(":compiler:frontend"))
-    testCompile(project(":compiler:frontend.java"))
-    testCompile(project(":compiler:util"))
-    testCompile(project(":compiler:cli-common"))
-    testCompile(project(":compiler:cli"))
-    testCompile(project(":compiler:light-classes"))
-    testCompile(project(":compiler:serialization"))
-    testCompile(project(":kotlin-preloader"))
-    testCompile(project(":compiler:daemon-common"))
-    testCompile(project(":js:js.serializer"))
-    testCompile(project(":js:js.frontend"))
-    testCompile(project(":js:js.translator"))
-    testCompileOnly(project(":plugins:android-extensions-compiler"))
-    testCompile(project(":kotlin-test:kotlin-test-jvm"))
-    testCompile(projectTests(":compiler:tests-common-jvm6"))
-    testCompileOnly(project(":kotlin-reflect-api"))
-    testCompile(commonDep("junit:junit"))
-    testCompile(androidDxJar()) { isTransitive = false }
-    testCompile(intellijCoreDep()) { includeJars("intellij-core"); isTransitive = false }
-    testCompile(intellijDep()) {
+    compile(project(":core:descriptors"))
+    compile(project(":core:descriptors.jvm"))
+    compile(project(":core:deserialization"))
+    compile(project(":compiler:util"))
+    compile(project(":compiler:backend"))
+    compile(project(":compiler:ir.ir2cfg"))
+    compile(project(":compiler:frontend"))
+    compile(project(":compiler:frontend.java"))
+    compile(project(":compiler:util"))
+    compile(project(":compiler:cli-common"))
+    compile(project(":compiler:cli"))
+    compile(project(":compiler:light-classes"))
+    compile(project(":compiler:serialization"))
+    compile(project(":kotlin-preloader"))
+    compile(project(":compiler:daemon-common"))
+    compile(project(":js:js.serializer"))
+    compile(project(":js:js.frontend"))
+    compile(project(":js:js.translator"))
+    compileOnly(project(":plugins:android-extensions-compiler"))
+    compile(project(":kotlin-test:kotlin-test-jvm"))
+    compile(project(":compiler:tests-common-jvm6"))
+    compileOnly(project(":kotlin-reflect-api"))
+    compile(commonDep("junit:junit"))
+    compile(androidDxJar()) { isTransitive = false }
+    compile(intellijCoreDep()) { includeJars("intellij-core"); isTransitive = false }
+    compile(intellijDep()) {
         includeJars("openapi", "idea", "idea_rt", "guava", "trove4j", "picocontainer", "asm-all", "log4j", "jdom", rootProject = rootProject)
         isTransitive = false
     }
 }
 
 sourceSets {
-    "main" { }
-    "test" { projectDefault() }
+    "main" { projectDefault() }
+    "test" { }
 }
-
-testsJar {}

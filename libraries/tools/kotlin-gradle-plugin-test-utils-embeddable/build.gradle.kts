@@ -13,11 +13,12 @@ plugins { `java` }
 
 val packedJars by configurations.creating
 
-val projectsToInclude = listOf(":compiler:tests-common",
-                               ":compiler:incremental-compilation-impl",
+val projectsToInclude = listOf(":compiler:incremental-compilation-impl",
                                ":kotlin-build-common")
 
 dependencies {
+    compile(project(":compiler:tests-common")) { isTransitive = false }
+
     for (projectName in projectsToInclude) {
         compile(projectTests(projectName)) { isTransitive = false }
         packedJars(projectTests(projectName)) { isTransitive = false }

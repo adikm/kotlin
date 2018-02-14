@@ -20,7 +20,7 @@ dependencies {
     testCompile(project(":compiler:frontend.java"))
     testCompile(project(":compiler:daemon-common"))
     testCompile(project(":kotlin-daemon-client"))
-    testCompile(projectTests(":compiler:tests-common"))
+    testCompile(project(":compiler:tests-common"))
     testCompile(commonDep("junit:junit"))
     testCompile(intellijCoreDep()) { includeJars("intellij-core") }
     testCompile(intellijDep()) { includeJars("idea", "idea_rt", "openapi", "log4j", "jdom", "jps-model") }
